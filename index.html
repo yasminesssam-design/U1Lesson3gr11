@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lesson 1-3 | الذكاء الاصطناعي في الحياة اليومية والصناعة</title>
+<style>
+:root{--bg:#eef5ff;--card:#fff;--tx:#12263f;--pr:#0b6fc2;--ok:#1a9a52;--no:#d63a3a;--ac:#f5a300;--bd:#d5e3f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1626;--card:#14253d;--tx:#e8f1fc;--bd:#274468}}
+:root[data-theme=dark]{--bg:#0b1626;--card:#14253d;--tx:#e8f1fc;--bd:#274468}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:'Segoe UI',Tahoma,Arial,sans-serif;font-size:18px;line-height:1.7;color:var(--tx);background:var(--bg);overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(120deg,var(--bg),#cfe4ff44,var(--bg));background-size:300% 300%;animation:g 14s ease infinite}
+@keyframes g{50%{background-position:100% 50%}}
+.fl{position:fixed;font-size:28px;opacity:.25;animation:up 12s linear infinite;z-index:-1}
+@keyframes up{from{transform:translateY(105vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
+header{text-align:center;padding:28px 14px;background:linear-gradient(135deg,#0b6fc2,#12a5d8);color:#fff;border-radius:0 0 28px 28px}
+header h1{margin:6px 0;font-size:clamp(24px,5vw,38px)}header p{margin:0;opacity:.9}
+main{max-width:1100px;margin:auto;padding:14px}
+.sec{background:var(--card);border:2px solid var(--bd);border-radius:20px;padding:16px;margin:18px 0;opacity:0;transform:translateY(24px);transition:.6s}
+.sec.on{opacity:1;transform:none}
+.sec>h2{margin:0 0 10px;color:var(--pr);font-size:22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.row{grid-template-columns:1fr}}
+.col{border-radius:14px;padding:12px;background:#0b6fc20d;position:relative}
+.col.ar{direction:rtl;text-align:right;background:#1a9a520d}
+.tag{display:inline-block;font-size:13px;font-weight:700;background:var(--pr);color:#fff;border-radius:99px;padding:0 10px}
+.ar .tag{background:var(--ok)}
+.say{border:0;background:var(--ac);color:#222;border-radius:99px;padding:2px 12px;font-size:15px;cursor:pointer;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:16px;margin:6px 0}th,td{border:1px solid var(--bd);padding:6px 8px}th{background:#0b6fc226}
+ul{margin:4px 0;padding-inline-start:22px}
+.key{background:#f5a30022;border-inline-start:6px solid var(--ac);border-radius:10px;padding:8px 12px;margin:8px 0}
+.q{border:2px solid var(--bd);border-radius:16px;padding:12px;margin:14px 0;background:var(--card)}
+.q h3{margin:0 0 8px;font-size:18px}
+.opts{display:grid;gap:8px;margin-top:8px}
+.o{font:inherit;color:var(--tx);background:var(--bg);border:2px solid var(--bd);border-radius:12px;padding:8px 12px;cursor:pointer;display:flex;justify-content:space-between;gap:10px;transition:.2s}
+.o:hover{transform:scale(1.02);border-color:var(--pr)}.o span:last-child{direction:rtl;text-align:right}.o span:first-child{text-align:left}
+.o.sel{border-color:var(--pr);background:#0b6fc233}.o.good{background:#1a9a5233;border-color:var(--ok)}.o.bad{background:#d63a3a33;border-color:var(--no)}
+.q.shake{animation:sh .4s}@keyframes sh{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.q.pop{animation:pp .5s}@keyframes pp{50%{transform:scale(1.03)}}
+.chk{margin-top:8px;background:var(--pr);color:#fff;border:0;border-radius:99px;padding:6px 18px;font-size:16px;cursor:pointer}
+.fb{font-weight:700;margin-top:6px;min-height:1.4em}
+#bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border:2px solid var(--bd);border-radius:99px;padding:4px 14px;display:flex;justify-content:space-between;font-weight:700;margin:8px 0}
+details{background:var(--bg);border-radius:12px;padding:8px 12px;margin:8px 0;border:1px solid var(--bd)}summary{cursor:pointer;font-weight:700}
+.p{position:fixed;font-size:26px;pointer-events:none;animation:bu 1.1s ease-out forwards;z-index:9}
+@keyframes bu{to{transform:translate(var(--x),var(--y)) rotate(300deg);opacity:0}}
+#res{text-align:center;font-size:22px;font-weight:700}
+</style></head><body>
+<div class="bg"></div>
+<header><div style="font-size:42px">🤖📱🏥🌾</div>
+<h1>Lesson 1-3: AI in Daily Life and Industry</h1>
+<h1 dir="rtl">الدرس 1-3: الذكاء الاصطناعي في الحياة اليومية والصناعة</h1>
+<p>🔊 Tap the yellow buttons to listen · اضغط الأزرار الصفراء للاستماع</p></header>
+<main>
+
+<section class="sec"><h2><span>🎯 Learning Objectives · أهداف التعلم</span></h2><div class="row">
+<div class="col en" lang="en"><span class="tag">English</span> <button class="say">🔊 Listen</button>
+<ul><li>Give examples of how AI is used in daily life and various industries.</li><li>Explain what AI is good at and what requires caution when using AI.</li></ul></div>
+<div class="col ar" lang="ar" dir="rtl"><span class="tag">العربية</span> <button class="say">🔊 استمع</button>
+<ul><li>اذكر أمثلة على استخدام الذكاء الاصطناعي في الحياة اليومية وفي مختلف الصناعات.</li><li>اشرح ما يجيده الذكاء الاصطناعي وما يتطلب الحذر عند استخدامه.</li></ul></div></div></section>
+
+<section class="sec"><h2><span>💡 Introduction · مقدمة</span></h2><div class="row">
+<div class="col en" lang="en"><span class="tag">English</span> <button class="say">🔊 Listen</button>
+<p>AI is already part of many everyday services. A video site recommends the next clip, a voice assistant answers a spoken question, a translation tool converts text on a foreign menu, and a phone unlocks by recognizing your face. In industry, AI analyzes medical images, predicts when a machine will fail, and plans delivery routes.</p>
+<p>AI is effective at identifying patterns in data, but it is not suited to every task, and some uses require caution.</p>
+<div class="key">❓ <b>Guiding question:</b> Where is AI used in daily life and industry, what is AI good at, and what needs caution?</div></div>
+<div class="col ar" lang="ar" dir="rtl"><span class="tag">العربية</span> <button class="say">🔊 استمع</button>
+<p>الذكاء الاصطناعي أصبح جزءًا من كثير من الخدمات اليومية: موقع الفيديو يقترح المقطع التالي، والمساعد الصوتي يجيب عن سؤال منطوق، وأداة الترجمة تحوّل نص قائمة طعام أجنبية، والهاتف يُفتح بالتعرف على وجهك. وفي الصناعة يحلل الذكاء الاصطناعي الصور الطبية، ويتوقع متى ستتعطل الآلة، ويخطط مسارات التوصيل.</p>
+<p>الذكاء الاصطناعي ممتاز في اكتشاف الأنماط في البيانات، لكنه لا يناسب كل مهمة، وبعض استخداماته تتطلب الحذر.</p>
+<div class="key">❓ <b>سؤال الدرس:</b> أين يُستخدم الذكاء الاصطناعي في الحياة اليومية والصناعة؟ وما الذي يجيده؟ وما الذي يتطلب الحذر؟</div></div></div>
+<div class="key">✏️ <b>Explore in pairs · استكشف مع زميلك:</b> List three services you used this week that you think used AI; predict what data each needed; decide which would matter most if it made a mistake. · اذكر ثلاث خدمات استخدمتها هذا الأسبوع وتظن أنها تستخدم الذكاء الاصطناعي، وتوقع البيانات التي احتاجتها كل خدمة، ثم قرر أيها أخطر إذا أخطأت.</div></section>
+
+<section class="sec"><h2><span>📱 1. Use of AI in Daily Life · استخدام الذكاء الاصطناعي في الحياة اليومية</span></h2><div class="row">
+<div class="col en" lang="en"><span class="tag">English</span> <button class="say">🔊 Listen</button>
+<p>Various AI technologies are already in use around us.</p>
+<table><tr><th>Service</th><th>Role of AI</th><th>Examples</th></tr>
+<tr><td>🎬 Recommendation systems</td><td>Predict preferences from past behavior data and display recommendations.</td><td>YouTube, Amazon, Spotify</td></tr>
+<tr><td>🎤 Voice assistants</td><td>Recognize a voice, understand commands, and execute them.</td><td>Siri, Google Assistant</td></tr>
+<tr><td>🌐 Machine translation</td><td>Automatically translate text into different languages.</td><td>Google Translate, DeepL</td></tr>
+<tr><td>🙂 Face recognition</td><td>Automatically detect and identify human faces in photographs.</td><td>Smartphone unlocking</td></tr></table>
+<div class="key"><b>Key term:</b> <u>recommendation system</u> — predicts preferences from past behavior data and displays recommendations.</div></div>
+<div class="col ar" lang="ar" dir="rtl"><span class="tag">العربية</span> <button class="say">🔊 استمع</button>
+<p>توجد تقنيات ذكاء اصطناعي متنوعة نستخدمها حولنا بالفعل.</p>
+<table><tr><th>الخدمة</th><th>دور الذكاء الاصطناعي</th><th>أمثلة</th></tr>
+<tr><td>🎬 أنظمة التوصية</td><td>تتوقع التفضيلات من بيانات السلوك السابق وتعرض الاقتراحات.</td><td>يوتيوب، أمازون، سبوتيفاي</td></tr>
+<tr><td>🎤 المساعدات الصوتية</td><td>تتعرف على الصوت وتفهم الأوامر وتنفذها.</td><td>سيري، مساعد جوجل</td></tr>
+<tr><td>🌐 الترجمة الآلية</td><td>تترجم النصوص تلقائيًا إلى لغات مختلفة.</td><td>مترجم جوجل، ديبل</td></tr>
+<tr><td>🙂 التعرف على الوجه</td><td>تكتشف وجوه البشر في الصور وتحدد هويتها تلقائيًا.</td><td>فتح قفل الهاتف</td></tr></table>
+<div class="key"><b>مصطلح:</b> <u>نظام التوصية</u> — نظام يتوقع التفضيلات من بيانات السلوك السابق ويعرض الاقتراحات.</div></div></div></section>
+
+<section class="sec"><h2><span>🏭 2. Use of AI in Industry · استخدام الذكاء الاصطناعي في الصناعة</span></h2><div class="row">
+<div class="col en" lang="en"><span class="tag">English</span> <button class="say">🔊 Listen</button>
+<p>AI technologies are also being introduced in various industries.</p>
+<table><tr><th>Industry</th><th>Examples of AI use</th></tr>
+<tr><td>🏥 Healthcare</td><td>Image-diagnosis AI (detecting diseases from X-ray and CT images), drug-discovery support</td></tr>
+<tr><td>🌾 Agriculture</td><td>Predicting harvest timing, detecting pests and diseases</td></tr>
+<tr><td>⚙️ Manufacturing</td><td>Automation of product quality inspection, predictive maintenance</td></tr>
+<tr><td>🚚 Logistics</td><td>Optimization of delivery routes</td></tr></table></div>
+<div class="col ar" lang="ar" dir="rtl"><span class="tag">العربية</span> <button class="say">🔊 استمع</button>
+<p>تُستخدم تقنيات الذكاء الاصطناعي أيضًا في صناعات مختلفة.</p>
+<table><tr><th>المجال</th><th>أمثلة على الاستخدام</th></tr>
+<tr><td>🏥 الرعاية الصحية</td><td>الذكاء الاصطناعي لتشخيص الصور (اكتشاف الأمراض من صور الأشعة السينية والمقطعية)، ودعم اكتشاف الأدوية</td></tr>
+<tr><td>🌾 الزراعة</td><td>التنبؤ بموعد الحصاد، واكتشاف الآفات والأمراض</td></tr>
+<tr><td>⚙️ التصنيع</td><td>أتمتة فحص جودة المنتجات، والصيانة التنبؤية</td></tr>
+<tr><td>🚚 الخدمات اللوجستية</td><td>تحسين مسارات التوصيل</td></tr></table></div></div></section>
+
+<section class="sec"><h2><span>⚖️ 3. Characteristics of AI and Cautions · خصائص الذكاء الاصطناعي ومحاذير استخدامه</span></h2><div class="row">
+<div class="col en" lang="en"><span class="tag">English</span> <button class="say">🔊 Listen</button>
+<p><b>✅ (1) What AI is good at</b></p><ul><li>Finding and classifying patterns in complex data such as images and text</li><li>Recognition and generation of images, audio, and text</li><li>Probabilistic reasoning and prediction based on data</li></ul>
+<p><b>⚠️ (2) What requires caution</b></p><ul><li>Ethical judgments (may lead to discrimination or prejudice)</li><li>Judgments involving personal information or privacy</li><li>Final decision-making (who is responsible for the result?)</li><li>Accuracy when training data is biased</li><li>Generating content that differs from the facts (hallucination)</li><li>Rights issues when copyrighted works are used as training data</li><li>Loss of clarity about how a judgment was made (the black-box problem)</li></ul>
+<div class="key"><b>Key fact:</b> AI is good at finding patterns in data, but human judgment is still needed where ethics, privacy, and responsibility are involved.</div></div>
+<div class="col ar" lang="ar" dir="rtl"><span class="tag">العربية</span> <button class="say">🔊 استمع</button>
+<p><b>✅ (1) ما يجيده الذكاء الاصطناعي</b></p><ul><li>اكتشاف الأنماط وتصنيفها في البيانات المعقدة مثل الصور والنصوص</li><li>التعرّف على الصور والصوت والنصوص وتوليدها</li><li>الاستدلال الاحتمالي والتنبؤ بناءً على البيانات</li></ul>
+<p><b>⚠️ (2) ما يتطلب الحذر</b></p><ul><li>الأحكام الأخلاقية (قد تؤدي إلى التمييز أو التحيز)</li><li>الأحكام المتعلقة بالمعلومات الشخصية أو الخصوصية</li><li>اتخاذ القرار النهائي (من المسؤول عن النتيجة؟)</li><li>دقة الأحكام عندما تكون بيانات التدريب متحيزة</li><li>توليد محتوى يختلف عن الحقائق (الهلوسة)</li><li>مشكلات الحقوق عند استخدام أعمال محمية بحقوق النشر في التدريب</li><li>غموض كيفية الوصول إلى الحكم (مشكلة الصندوق الأسود)</li></ul>
+<div class="key"><b>حقيقة مهمة:</b> الذكاء الاصطناعي ممتاز في إيجاد الأنماط، لكن الحكم البشري يظل ضروريًا حيث تدخل الأخلاق والخصوصية والمسؤولية.</div></div></div>
+<div class="key">🔑 <b>black-box problem · مشكلة الصندوق الأسود:</b> when it is unclear how an AI reached its judgment. · عندما لا يكون واضحًا كيف وصل الذكاء الاصطناعي إلى حكمه.</div></section>
+
+<section class="sec"><h2><span>✍️ Open &amp; Essay Questions · الأسئلة المفتوحة والمقالية</span></h2>
+<div class="q"><h3>1️⃣ Explore (In Pairs): List three services you used this week that you think used AI. For each, predict what data the AI needed. Which one would matter most if it made a mistake?</h3><h3 dir="rtl" style="color:var(--ok)">1️⃣ استكشف (مع زميلك): اذكر ثلاث خدمات استخدمتها هذا الأسبوع وتظن أنها تستخدم الذكاء الاصطناعي. توقّع البيانات التي احتاجتها كل خدمة. أي خدمة ستكون الأهم لو أخطأت؟</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p><b>Sample:</b> (1) YouTube recommendation — needs your watch history. (2) Voice assistant — needs your voice and commands. (3) Google Translate — needs the text to translate. A wrong translation of an important document (medical or legal) would matter most; a wrong video suggestion matters least.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p><b>مثال:</b> (1) توصيات يوتيوب — تحتاج سجل مشاهداتك. (2) المساعد الصوتي — يحتاج صوتك وأوامرك. (3) مترجم جوجل — يحتاج النص المراد ترجمته. الأهم لو أخطأ هو ترجمة مستند مهم (طبي أو قانوني)، أما اقتراح فيديو خاطئ فتأثيره أقل.</p></div></div></div>
+<div class="q"><h3>2️⃣ Think It Through (Agriculture): Give one realistic advantage of introducing AI in agriculture and one concern to consider before introduction, and briefly explain the reason for each.</h3><h3 dir="rtl" style="color:var(--ok)">2️⃣ فكّر (الزراعة): اذكر ميزة واقعية واحدة لإدخال الذكاء الاصطناعي في الزراعة، ومشكلة واحدة يجب مراعاتها قبل إدخاله، مع شرح السبب باختصار.</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p><b>Advantage:</b> it detects pests and diseases early from field photos, because AI is good at finding patterns in images, so crops are saved. <b>Concern:</b> a wrong prediction (e.g., about harvest time) could waste money and effort, because AI can be inaccurate when its training data is limited or biased, so farmers should verify.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p><b>الميزة:</b> اكتشاف الآفات والأمراض مبكرًا من صور الحقول، لأن الذكاء الاصطناعي جيد في إيجاد الأنماط في الصور فيُنقَذ المحصول. <b>المشكلة:</b> التنبؤ الخاطئ (مثل موعد الحصاد) قد يُهدر المال والجهد، لأن دقته قد تقل إذا كانت بيانات التدريب محدودة أو متحيزة، لذا يجب أن يتحقق المزارع.</p></div></div></div>
+<div class="q"><h3>3️⃣ Think It Through (Hospital): A hospital is considering using image-diagnosis AI to detect diseases from X-ray images. Explain why the final diagnosis should be confirmed by a human doctor rather than left to AI alone.</h3><h3 dir="rtl" style="color:var(--ok)">3️⃣ فكّر (المستشفى): يفكر مستشفى في استخدام الذكاء الاصطناعي لتشخيص الأمراض من صور الأشعة. اشرح لماذا يجب أن يؤكد الطبيب التشخيص النهائي بدلًا من تركه للذكاء الاصطناعي وحده.</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p>AI is good at spotting patterns, but it can be wrong or biased by its training data, and it cannot take responsibility for the result. A wrong diagnosis can harm a patient, so a doctor must check it and make the final decision.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p>الذكاء الاصطناعي جيد في رصد الأنماط، لكنه قد يخطئ أو يتأثر بتحيز بيانات التدريب، ولا يستطيع تحمل مسؤولية النتيجة. والتشخيص الخاطئ قد يضر المريض، لذلك يجب أن يراجعه الطبيب ويتخذ القرار النهائي.</p></div></div></div>
+<div class="q"><h3>4️⃣ Pause &amp; Think (Privacy): AI services often use your personal data — what you watch, buy, or say. Why does this raise privacy concerns, and who should decide how your data is used?</h3><h3 dir="rtl" style="color:var(--ok)">4️⃣ توقف وفكّر (الخصوصية): كثيرًا ما تستخدم خدمات الذكاء الاصطناعي بياناتك الشخصية — ما تشاهده وتشتريه وتقوله. لماذا يثير ذلك مخاوف تتعلق بالخصوصية، ومن يجب أن يقرر كيفية استخدام بياناتك؟</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p>This data can reveal private habits and could be leaked or misused. The person who owns the data should have a say (by giving or refusing permission), together with clear laws and the companies' responsibility to protect it.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p>قد تكشف هذه البيانات عادات خاصة، ويمكن تسريبها أو إساءة استخدامها. ويجب أن يكون لصاحب البيانات رأي (بالموافقة أو الرفض)، مع وجود قوانين واضحة ومسؤولية الشركات عن حمايتها.</p></div></div></div>
+<div class="q"><h3>5️⃣ Think as an Engineer — Investigate &amp; Decide: (1) Choose one industry other than agriculture, find one real documented example of AI used in it, and record your source. (2) Note one benefit and one caution. (3) Should it use AI alone or with a human checking? Give two reasons.</h3><h3 dir="rtl" style="color:var(--ok)">5️⃣ فكّر كمهندس — ابحث وقرر: (1) اختر مجالًا غير الزراعة، وابحث عن مثال حقيقي موثّق لاستخدام الذكاء الاصطناعي فيه، وسجّل مصدرك. (2) اذكر فائدة واحدة وتحذيرًا واحدًا. (3) هل يستخدمه وحده أم مع مراجعة بشرية؟ اذكر سببين.</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p><b>Sample (Healthcare):</b> (1) AI that finds signs of disease in chest X-rays — <i>write the real source you found (website/article name and date).</i> (2) <b>Benefit:</b> scans many images quickly and flags what humans might miss. <b>Caution:</b> it may be wrong or biased, and it cannot take responsibility. (3) <b>Decision: with a human checking.</b> Reason 1: a wrong result could harm a patient. Reason 2: a doctor is responsible for the final decision.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p><b>مثال (الرعاية الصحية):</b> (1) ذكاء اصطناعي يكتشف علامات المرض في أشعة الصدر — <i>اكتب المصدر الحقيقي الذي وجدته (اسم الموقع/المقال والتاريخ).</i> (2) <b>الفائدة:</b> يفحص صورًا كثيرة بسرعة وينبه إلى ما قد يفوت البشر. <b>التحذير:</b> قد يخطئ أو يتحيز، ولا يتحمل المسؤولية. (3) <b>القرار: مع مراجعة بشرية.</b> السبب 1: النتيجة الخاطئة قد تضر المريض. السبب 2: الطبيب هو المسؤول عن القرار النهائي.</p></div></div></div>
+<div class="q"><h3>6️⃣ In a New Context: A school library wants to use AI to recommend books to students based on what they have borrowed before. Explain how the AI would work and identify one caution the school should consider.</h3><h3 dir="rtl" style="color:var(--ok)">6️⃣ في سياق جديد: تريد مكتبة مدرسة استخدام الذكاء الاصطناعي لاقتراح كتب للطلاب بناءً على ما استعاروه سابقًا. اشرح كيف يعمل الذكاء الاصطناعي، وحدد تحذيرًا واحدًا يجب أن تراعيه المدرسة.</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p>It is a recommendation system: it collects each student's past borrowing data, finds patterns in it (what similar books they liked), and predicts and displays new books that match. <b>Caution:</b> borrowing records are personal data, so the school must protect students' privacy (and not rely on AI alone to decide what students should read).</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p>هو نظام توصية: يجمع بيانات استعارة كل طالب السابقة، ويكتشف الأنماط فيها (الكتب المشابهة التي أعجبته)، ثم يتوقع ويعرض كتبًا جديدة مناسبة. <b>التحذير:</b> سجلات الاستعارة بيانات شخصية، فيجب على المدرسة حماية خصوصية الطلاب (وألّا تعتمد على الذكاء الاصطناعي وحده في تحديد ما يقرؤه الطلاب).</p></div></div></div>
+<div class="q"><h3>7️⃣ Exam-Style Question [6 marks]: Analyze why AI is well suited to some tasks but requires caution in others. Refer to what AI is good at (finding patterns, recognition, prediction) and to what needs caution (ethical judgments, privacy, final decision-making).</h3><h3 dir="rtl" style="color:var(--ok)">7️⃣ سؤال بنمط الامتحان [6 درجات]: حلّل لماذا يناسب الذكاء الاصطناعي بعض المهام لكنه يتطلب الحذر في مهام أخرى. اذكر ما يجيده (إيجاد الأنماط، التعرّف، التنبؤ) وما يتطلب الحذر (الأحكام الأخلاقية، الخصوصية، القرار النهائي).</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p><b>Suited:</b> AI finds and classifies patterns in large data, recognizes images/audio/text, and predicts from data — so it works well for recommendations, translation, and scanning images. <b>Caution:</b> in ethical judgments it may copy bias from data and cause discrimination; with personal data it threatens privacy; and for final decisions it cannot be responsible, and how it decided may be unclear (black box). <b>Conclusion:</b> AI is a powerful tool for pattern tasks, but human judgment is needed for responsibility, ethics, and fairness.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p><b>ما يناسبه:</b> يجد الأنماط ويصنفها في البيانات الكبيرة، ويتعرف على الصور والصوت والنصوص، ويتنبأ بالاعتماد على البيانات — لذا ينجح في التوصيات والترجمة وفحص الصور. <b>ما يتطلب الحذر:</b> في الأحكام الأخلاقية قد ينقل تحيز البيانات فيسبب التمييز؛ ومع البيانات الشخصية يهدد الخصوصية؛ وفي القرار النهائي لا يتحمل المسؤولية وقد يصعب فهم كيف قرر (الصندوق الأسود). <b>الخلاصة:</b> الذكاء الاصطناعي أداة قوية للمهام القائمة على الأنماط، لكن الحكم البشري ضروري للمسؤولية والأخلاق والعدالة.</p></div></div></div>
+<div class="q"><h3>8️⃣ Reflect &amp; Challenge: Which use of AI in this lesson surprised you most? Where in your own life do you think AI is making decisions about you? Challenge: choose one task where AI needs caution and suggest one rule that would make using AI for that task safer.</h3><h3 dir="rtl" style="color:var(--ok)">8️⃣ تأمّل وتحدَّ: أي استخدام للذكاء الاصطناعي في هذا الدرس أدهشك أكثر؟ وأين في حياتك تظن أن الذكاء الاصطناعي يتخذ قرارات بشأنك؟ تحدٍّ: اختر مهمة تتطلب الحذر واقترح قاعدة واحدة تجعل استخدام الذكاء الاصطناعي فيها أكثر أمانًا.</h3><div class="row"><div class="col en" lang="en"><span class="tag">Answer</span> <button class="say">🔊 Listen</button><p><b>Sample:</b> I was surprised that AI can find diseases in X-rays. AI decides which videos and songs I see. <b>Safer rule:</b> for medical diagnosis, a doctor must always confirm the AI's result.</p></div><div class="col ar" lang="ar" dir="rtl"><span class="tag">الإجابة</span> <button class="say">🔊 استمع</button><p><b>مثال:</b> أدهشني أن الذكاء الاصطناعي يكتشف الأمراض في صور الأشعة. وهو يقرر أي الفيديوهات والأغاني تظهر لي. <b>قاعدة أكثر أمانًا:</b> في التشخيص الطبي، يجب أن يؤكد الطبيب نتيجة الذكاء الاصطناعي دائمًا.</p></div></div></div>
+</section>
+
+<section class="sec"><h2><span>🎮 Questions · الأسئلة</span></h2>
+<div id="bar"><span>⭐ <span id="sc">0</span> / <span id="tot">0</span></span><span id="mt"></span></div>
+<div id="qs"></div><div id="res"></div></section>
+<section class="sec"><h2><span>📌 Lesson Question — Answered · إجابة سؤال الدرس</span></h2><div class="row">
+<div class="col en" lang="en"><span class="tag">English</span> <button class="say">🔊 Listen</button>
+<p>AI is used widely in daily life — in recommendation systems, voice assistants, machine translation, and face recognition — and in industry, across fields such as healthcare, agriculture, manufacturing, and logistics. AI is good at finding and classifying patterns in data, recognizing and generating images, audio, and text, and making probabilistic predictions from data. However, it needs caution where ethical judgments, personal information and privacy, and final decision-making are involved, and where training data is biased. So AI is a powerful tool for pattern-based tasks, but human judgment is still needed for responsibility, ethics, and fairness.</p></div>
+<div class="col ar" lang="ar" dir="rtl"><span class="tag">العربية</span> <button class="say">🔊 استمع</button>
+<p>يُستخدم الذكاء الاصطناعي على نطاق واسع في الحياة اليومية — في أنظمة التوصية والمساعدات الصوتية والترجمة الآلية والتعرف على الوجه — وفي الصناعة، في مجالات مثل الرعاية الصحية والزراعة والتصنيع والخدمات اللوجستية. وهو جيد في إيجاد الأنماط في البيانات وتصنيفها، والتعرف على الصور والصوت والنصوص وتوليدها، وإجراء تنبؤات احتمالية من البيانات. لكنه يتطلب الحذر عند الأحكام الأخلاقية، والمعلومات الشخصية والخصوصية، واتخاذ القرار النهائي، وعندما تكون بيانات التدريب متحيزة. إذن الذكاء الاصطناعي أداة قوية للمهام القائمة على الأنماط، لكن الحكم البشري لا يزال ضروريًا للمسؤولية والأخلاق والعدالة.</p></div></div>
+<div class="key">⭐ <b>Key takeaway · الخلاصة:</b> AI is good at finding and classifying patterns in data, but human judgment is still needed where ethics, privacy, and responsibility are involved. · الذكاء الاصطناعي ممتاز في إيجاد الأنماط وتصنيفها، لكن الحكم البشري ضروري حيث تدخل الأخلاق والخصوصية والمسؤولية.</div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+// scroll reveal + floating emojis
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:0});
+document.querySelectorAll('.sec').forEach(s=>io.observe(s));
+['🤖','💡','📱','🧠','⭐','🌾','🏥'].forEach((e,i)=>{const d=document.createElement('div');d.className='fl';d.textContent=e;d.style.left=(i*15+3)+'%';d.style.animationDelay=(-i*1.7)+'s';document.body.append(d)});
+// sound
+let ac;function tone(f,t,d,ty='sine'){ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(.15,ac.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+t+d);o.connect(g).connect(ac.destination);o.start(ac.currentTime+t);o.stop(ac.currentTime+t+d)}
+const win=()=>[523,659,784,1047].forEach((f,i)=>tone(f,i*.1,.25)),lose=()=>{tone(220,0,.3,'sawtooth');tone(165,.2,.4,'sawtooth')};
+function burst(em,n){for(let i=0;i<n;i++){const p=document.createElement('div');p.className='p';p.textContent=em[i%em.length];p.style.left=(30+Math.random()*40)+'vw';p.style.top='55vh';p.style.setProperty('--x',(Math.random()*500-250)+'px');p.style.setProperty('--y',(Math.random()*-400-50)+'px');document.body.append(p);setTimeout(()=>p.remove(),1200)}}
+// speech
+document.addEventListener('click',e=>{const b=e.target.closest('.say');if(!b)return;speechSynthesis.cancel();const c=b.parentElement,u=new SpeechSynthesisUtterance(c.innerText.replace(/Listen|استمع|English|العربية/g,''));u.lang=c.lang==='ar'?'ar-SA':'en-US';u.rate=.9;speechSynthesis.speak(u)});
+// quiz data
+const T=[["Recommendation system","نظام التوصية"],["Voice assistant","المساعد الصوتي"],["Machine translation","الترجمة الآلية"],["Face recognition","التعرف على الوجه"]];
+const I=[["Healthcare","الرعاية الصحية"],["Agriculture","الزراعة"],["Manufacturing","التصنيع"],["Logistics","الخدمات اللوجستية"]];
+const TF=[["○ True","○ صحيح"],["× False","× خطأ"]];
+const CA=[["Ethical judgments","الأحكام الأخلاقية"],["Finding and classifying patterns","اكتشاف الأنماط وتصنيفها"],["Judgments involving personal information or privacy","أحكام تتعلق بالمعلومات الشخصية أو الخصوصية"],["Final decision-making","اتخاذ القرار النهائي"]];
+const Q=[
+["a) YouTube recommends videos that match the user's preferences","أ) يوتيوب يقترح فيديوهات تناسب تفضيلات المستخدم",T,[0]],
+["b) Speaking to a smartphone to check the weather","ب) التحدث إلى الهاتف لمعرفة الطقس",T,[1]],
+["c) Translating a foreign-language website into one's native language","ج) ترجمة موقع بلغة أجنبية إلى اللغة الأم",T,[2]],
+["d) A smartphone camera automatically detects a person's face","د) كاميرا الهاتف تكتشف وجه الشخص تلقائيًا",T,[3]],
+["True or false: AI is good at probabilistic reasoning and prediction based on data.","صح أم خطأ: الذكاء الاصطناعي جيد في الاستدلال الاحتمالي والتنبؤ بناءً على البيانات.",TF,[0]],
+["True or false: AI is good at recognizing images and audio.","صح أم خطأ: الذكاء الاصطناعي جيد في التعرف على الصور والصوت.",TF,[0]],
+["True or false: It is fine to leave ethical judgments entirely to AI.","صح أم خطأ: لا بأس بترك الأحكام الأخلاقية للذكاء الاصطناعي بالكامل.",TF,[1]],
+["True or false: AI judgments can become inaccurate when training data is biased.","صح أم خطأ: قد تصبح أحكام الذكاء الاصطناعي غير دقيقة عندما تكون بيانات التدريب متحيزة.",TF,[0]],
+["What is the term for the system that predicts preferences from past behavior data and displays recommendations?","ما المصطلح الذي يدل على النظام الذي يتوقع التفضيلات من بيانات السلوك السابق ويعرض الاقتراحات؟",T,[0]],
+["What is the term for the AI technology that recognizes a voice, understands commands, and executes them?","ما المصطلح الذي يدل على تقنية الذكاء الاصطناعي التي تتعرف على الصوت وتفهم الأوامر وتنفذها؟",T,[1]],
+["In which industry are image-diagnosis AIs used?","في أي مجال تُستخدم أنظمة الذكاء الاصطناعي لتشخيص الصور؟",I,[0]],
+["In manufacturing, what is the term for the system that predicts product failures in advance?","في التصنيع، ما المصطلح الذي يدل على النظام الذي يتنبأ بأعطال المنتجات مسبقًا؟",[["Predictive maintenance","الصيانة التنبؤية"],["Hallucination","الهلوسة"],["Black-box problem","مشكلة الصندوق الأسود"],["Face recognition","التعرف على الوجه"]],[0]],
+["Choose the one that does NOT belong to “what requires caution when using AI.”","اختر ما لا ينتمي إلى «ما يتطلب الحذر عند استخدام الذكاء الاصطناعي».",CA,[1]],
+["a) Optimizing delivery routes — which industry?","أ) تحسين مسارات التوصيل — أي مجال؟",I,[3]],
+["b) Detecting diseases from X-ray images — which industry?","ب) اكتشاف الأمراض من صور الأشعة — أي مجال؟",I,[0]],
+["c) Detecting pests and diseases — which industry?","ج) اكتشاف الآفات والأمراض — أي مجال؟",I,[1]],
+["d) Automating product quality inspection — which industry?","د) أتمتة فحص جودة المنتجات — أي مجال؟",I,[2]],
+["Select ALL options that AI excels at.","اختر كل ما يجيده الذكاء الاصطناعي.",[["Ethical judgments","الأحكام الأخلاقية"],["Finding features in images and text and classifying them","إيجاد الخصائص في الصور والنصوص وتصنيفها"],["Judgments involving personal information","أحكام تتعلق بالمعلومات الشخصية"],["Probabilistic reasoning and prediction based on data","الاستدلال الاحتمالي والتنبؤ بناءً على البيانات"],["Decision-making that bears responsibility for results","اتخاذ قرار يتحمل مسؤولية النتائج"],["Recognition and generation of images, audio, and text","التعرف على الصور والصوت والنصوص وتوليدها"]],[1,3,5]],
+["Choose the one that is NOT an appropriate description of services that use AI.","اختر الوصف غير المناسب للخدمات التي تستخدم الذكاء الاصطناعي.",[["A recommendation system predicts preferences from past behavior data and displays recommendations.","نظام التوصية يتوقع التفضيلات من بيانات السلوك السابق ويعرض الاقتراحات."],["A voice assistant recognizes a voice, understands commands, and executes them.","المساعد الصوتي يتعرف على الصوت ويفهم الأوامر وينفذها."],["Machine translation is a system in which humans manually translate foreign languages.","الترجمة الآلية نظام يترجم فيه البشر اللغات الأجنبية يدويًا."],["Face recognition automatically detects and identifies human faces in photographs.","التعرف على الوجه يكتشف وجوه البشر في الصور ويحدد هويتها تلقائيًا."]],[2]],
+["Fill in blank (a): recommendations of videos that match one's preferences come from a ( a ) system.","املأ الفراغ (أ): توصيات الفيديو التي تناسب التفضيلات تأتي من نظام ( أ ).",T,[0]],
+["Fill in blank (b): one can speak to a smartphone to operate it with ( b ).","املأ الفراغ (ب): يمكن التحدث إلى الهاتف لتشغيله باستخدام ( ب ).",T,[1]],
+["Fill in blank (c): ( c ) converts foreign-language text into one's native language.","املأ الفراغ (ج): ( ج ) تحوّل النص الأجنبي إلى لغة المستخدم الأم.",T,[2]],
+["Choose ALL that require caution when using AI.","اختر كل ما يتطلب الحذر عند استخدام الذكاء الاصطناعي.",[["High-speed processing of large amounts of data","المعالجة السريعة لكميات كبيرة من البيانات"],["Ethical judgments","الأحكام الأخلاقية"],["Judgments involving personal information or privacy","أحكام تتعلق بالمعلومات الشخصية أو الخصوصية"],["Recognition of images and audio","التعرف على الصور والصوت"]],[1,2]]
+];
+let score=0,done=0;$('#tot').textContent=Q.length;
+Q.forEach((q,n)=>{const d=document.createElement('div');d.className='q';const multi=q[3].length>1;
+d.innerHTML=`<h3>${n+1}. ${q[0]}</h3><h3 dir="rtl" style="color:var(--ok)">${n+1}. ${q[1]}</h3><div class="opts"></div><div class="fb"></div>`;
+const box=d.querySelector('.opts'),fb=d.querySelector('.fb');let lock=false;const sel=new Set();
+const fin=()=>{lock=true;const ok=q[3].length===sel.size&&q[3].every(i=>sel.has(i));
+[...box.children].forEach((b,i)=>{if(q[3].includes(i))b.classList.add('good');else if(sel.has(i))b.classList.add('bad')});
+done++;if(ok){score++;win();burst(['🎉','⭐','😀','✨'],14);d.classList.add('pop');fb.textContent='😀 Correct! · إجابة صحيحة!';fb.style.color='var(--ok)'}else{lose();burst(['😢'],4);d.classList.add('shake');fb.textContent='😢 Not quite — see the green answer · ليست صحيحة، الإجابة الخضراء هي الصحيحة';fb.style.color='var(--no)'}
+$('#sc').textContent=score;if(done===Q.length){const p=Math.round(score/Q.length*100);$('#res').innerHTML=`🏆 ${score}/${Q.length} (${p}%)<br>${p>=80?'Excellent! ممتاز!':p>=50?'Good job! أحسنت!':'Keep practicing! واصل التدريب!'}`;burst(['🏆','🎊','🌟'],24);$('#res').scrollIntoView({behavior:'smooth'})}};
+q[2].forEach((o,i)=>{const b=document.createElement('button');b.className='o';b.innerHTML=`<span>${o[0]}</span><span>${o[1]}</span>`;
+b.onclick=()=>{if(lock)return;tone(600,0,.08);if(multi){sel.has(i)?sel.delete(i):sel.add(i);b.classList.toggle('sel')}else{sel.add(i);fin()}};box.append(b)});
+if(multi){const c=document.createElement('button');c.className='chk';c.textContent='Check ✔ تحقق';c.onclick=()=>{if(!lock&&sel.size){fin();c.remove()}};d.insertBefore(c,fb)}
+$('#qs').append(d)});
+</script></body></html>
